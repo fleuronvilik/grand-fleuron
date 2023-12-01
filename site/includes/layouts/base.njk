@@ -7,13 +7,13 @@
 
     {# include main.css if in development mode #}
     {% if helpers.environment === 'development' %}
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="css/main.css">
     {% else %}
-        <link rel="stylesheet" href="/css/main.min.css">
+        <link rel="stylesheet" href="css/main.min.css">
     {% endif %}
 
     {# include javascript #}
-    <script src="/js/{{ 'main.js' if helpers.environment === 'development' else 'main.min.js' }}" defer></script>
+    <script src="js/{{ 'main.js' if helpers.environment === 'development' else 'main.min.js' }}" defer></script>
 
     {# page meta #}
     <meta name="description" content="{{ meta_description | truncate(140) if meta_description else content | striptags | truncate(140) }}">
